@@ -26,8 +26,10 @@
         border: 1px solid rgba(86, 61, 124, .2);
       }
 
-      .themed-container {
+      .themed-container1 {
         display: flex;
+        width: 100%;
+        height: auto;
         padding: 40px 40px !important; /* tb rl .. was .75rem */
         margin: 0px; /* was 1.5rem */
         /* background-color: rgba(0, 123, 255, .15); */
@@ -35,19 +37,70 @@
         align-items:center;
         justify-content:center;
       }
+      .themed-container2 {
+        display: flex;
+        min-width: 50% !important;
+        height: auto;
+        padding: 0px 0px !important; /* tb rl .. was .75rem */
+        margin: 0px; /* was 1.5rem */
+        /* background-color: rgba(0, 123, 255, .15); */
+        /* border: 1px solid rgba(0, 123, 255, .2); */
+        align-items:center;
+        justify-content:center;
+        vertical-align: middle;
+      }
+      /* toggles order in tablet, mobile .. ref: https://developer.mozilla.org/en-US/docs/Web/CSS/order */
+      @media (max-width: 992px) {
+        .themed-container2 {
+          order: 1;
+        }
+        .themed-container1 {
+          order: 2;
+        }
+      }
       
+      /* back to basics bg img responsive images, thanks to: https://stackoverflow.com/questions/12609110/responsive-css-background-images .. changed background position from 0% 0% to center and background size from cover to contain */
       .bg1 {
-        background-image: url("https://peakdentalstore.com/mm5/graphics/00000001/1/fountain_dental_2.jpg");
-        /* height: 500px; */
-        background-position: 0% 0%; /* x% y% */
+        background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
+        background-position: center; /* x% y% */
         left: 0px !important;
         background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 400px !important;
-        min-width: auto !important;
+        background-size: contain;
+        min-height: 350px !important;
+        min-width: 30% !important;
         position: relative;
         /* tb rl */
         /* padding: 10rem; */
+      }
+      /* tablet */
+      @media (max-width: 992px) {
+        .bg1 {
+        background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
+        background-position: 50% 0%; /* x% y% */
+        /* left: 0px !important; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 250px !important;
+        min-width: 100% !important;
+        position: relative;
+        /* tb rl */
+        /* padding: 10rem; */
+        }
+      }
+      /* mobile .. breakpoints: https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+      @media (max-width: 576px) {
+        .bg1 {
+        background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
+        background-position: 50% 0%; /* x% y% */
+        /* left: 0px !important; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 150px !important;
+        min-width: 100% !important;
+        position: relative;
+        /* tb rl */
+        /* padding: 10rem; */
+        }
       }
       .lefttxt {
         color:#ffffff;
@@ -55,6 +108,15 @@
         font-family:'Lato',sans-serif;
         font-weight:700;
         background:#0071B2;
+      }
+      @media (max-width: 992px) {
+        .lefttxt {
+        color:#ffffff;
+        font-size:1.5em;
+        font-family:'Lato',sans-serif;
+        font-weight:700;
+        background:#0071B2;
+        }
       }
     </style>
     <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
@@ -65,9 +127,9 @@
     
     <div class="bs5">
     
-    <div class="row m-5">
-      <div class="col themed-container lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
-      <div class="col themed-container bg1"></div>
+    <div class="row">
+      <div class="col-lg-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
+      <div class="col-lg-6 themed-container2 bg1"></div>
       <!-- <div class="col-md-4 themed-container">.col-md-4</div> -->
     </div>
       
