@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>simple_responsive_bs5.0.2_grid</title>
+    
+    <!-- notes .. thanks to: https://getbootstrap.com/docs/5.0/examples/grid/#containers -->
+    <style>
+      body {
+        padding: 0px !important;
+        margin: 0px !important;
+      }
+      /* for ref, .col-md-6 is this */
+      /* .col-md-6 {
+        flex:0 0 auto;
+        width:50%
+      } */
+      .themed-grid-col {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid rgba(86, 61, 124, .2);
+      }
+
+      .themed-container {
+        display: flex;
+        padding: 40px 40px !important; /* tb rl .. was .75rem */
+        margin: 0px; /* was 1.5rem */
+        /* background-color: rgba(0, 123, 255, .15); */
+        /* border: 1px solid rgba(0, 123, 255, .2); */
+        align-items:center;
+        justify-content:center;
+      }
+      
+      .bg1 {
+        background-image: url("https://peakdentalstore.com/mm5/graphics/00000001/1/fountain_dental_2.jpg");
+        /* height: 500px; */
+        background-position: 0% 0%; /* x% y% */
+        left: 0px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px !important;
+        min-width: auto !important;
+        position: relative;
+        /* tb rl */
+        /* padding: 10rem; */
+      }
+      .lefttxt {
+        color:#ffffff;
+        font-size:3em;
+        font-family:'Lato',sans-serif;
+        font-weight:700;
+        background:#0071B2;
+      }
+    </style>
+    <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
+    <link rel="stylesheet" href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css"/>
+    
+  </head>
+  <body>
+    
+    <div class="bs5">
+    
+    <div class="row m-5">
+      <div class="col themed-container lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
+      <div class="col themed-container bg1"></div>
+      <!-- <div class="col-md-4 themed-container">.col-md-4</div> -->
+    </div>
+      
+  </body>
+</html>
+  
