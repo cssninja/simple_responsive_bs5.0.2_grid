@@ -59,8 +59,8 @@
         justify-content:center;
         vertical-align: middle;
       }
-      /* toggles order in tablet, mobile .. ref: https://developer.mozilla.org/en-US/docs/Web/CSS/order */
-      @media (max-width: 992px) {
+      /* toggles order in tablet, mobile .. xl collapse is at 1200px, lg is at 992px .. ref: https://developer.mozilla.org/en-US/docs/Web/CSS/order */
+      @media (max-width: 1200px) {
         .themed-container2 {
           order: 1;
         }
@@ -111,9 +111,10 @@
       }
       .lefttxt {
         color:#ffffff;
-        font-size:50px; /* was 3em in codepen, higher for miva */
+        font-size: 65px; /* was 3em in codepen, higher for miva */
         font-family:'Lato',sans-serif !important;
         font-weight:700;
+        line-height: 68px; /* only for miva */
         background:#0071B2;
       }
       @media (max-width: 992px) {
@@ -122,6 +123,7 @@
         font-size:20px; /* was 1.5em in codepen, higher in miva */
         font-family:'Lato',sans-serif !important;
         font-weight:700;
+        line-height: 35px; /* only for miva */
         background:#0071B2;
         }
       }
@@ -135,8 +137,9 @@
     <div class="bs5">
     
     <div class="row whitecon">
-      <div class="col-lg-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
-      <div class="col-lg-6 themed-container2 bg1"></div>
+      <!-- xl collapse is at 1200px, lg is at 992px for 'toggle order' media query above -->
+      <div class="col-xl-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
+      <div class="col-xl-6 themed-container2 bg1"></div>
       <!-- <div class="col-md-4 themed-container">.col-md-4</div> -->
     </div>
       
