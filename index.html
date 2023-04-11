@@ -15,17 +15,20 @@
     
     <!-- notes .. thanks to: https://getbootstrap.com/docs/5.0/examples/grid/#containers -->
     <style>
+      /* borders */
       body {
         padding: 0px !important;
         margin: 0px !important;
         overflow: hidden !important; /* fixes mobile issue w/white space in right margin, where from? */
       }
+      
       /* for ref, .col-md-6 is this */
       /* .col-md-6 {
         flex:0 0 auto;
         width:50%
       } */
       
+      /* white bg */
       .whitecon {
         background: #ffffff;
         padding: 8% 5% 8% 5%; /* t r b l */
@@ -36,6 +39,8 @@
         padding: 8% 0% 8% 0%; /* t r b l */
         }
       }
+      
+      /* disabled from original bs */
       .themed-grid-col {
         padding-top: .75rem;
         padding-bottom: .75rem;
@@ -43,6 +48,7 @@
         border: 1px solid rgba(86, 61, 124, .2);
       }
 
+      /* TEXT */
       .themed-container1 {
         display: flex;
         width: 100%;
@@ -54,6 +60,7 @@
         align-items:center;
         justify-content:center;
       }
+      /* IMAGE */
       .themed-container2 {
         display: flex;
         min-width: 50% !important;
@@ -76,7 +83,8 @@
         }
       }
       
-      /* back to basics bg img responsive images, thanks to: https://stackoverflow.com/questions/12609110/responsive-css-background-images .. changed background position from 0% 0% to center and background size from cover to contain */
+      /* BG IMG .. back to basics bg img responsive images, thanks to: https://stackoverflow.com/questions/12609110/responsive-css-background-images .. changed background position from 0% 0% to center and background size from cover to contain .. breakpoints: https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+      /* DESKTOP */
       .bg1 {
         background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
         background-position: center; /* x% y% */
@@ -88,7 +96,7 @@
         /* tb rl */
         /* padding: 10rem; */
       }
-      /* tablet */
+      /* TABLET */
       @media (max-width: 992px) {
         .bg1 {
         background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
@@ -102,7 +110,7 @@
         /* padding: 10rem; */
         }
       }
-      /* mobile .. breakpoints: https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+      /* MOBILE */
       @media (max-width: 576px) {
         .bg1 {
         background-image: url("https://raw.githubusercontent.com/cssninja/simple_responsive_bs5.0.2_grid/main/fountain_dental.jpg");
@@ -116,6 +124,8 @@
         margin: 0px 0px 0px 20px;
         }
       }
+      
+      /* TEXT .. had to add google fonts above to properly render fonts in miva */
       .lefttxt {
         color:#ffffff;
         font-size: 65px; /* was 3em in codepen, higher for miva */
@@ -136,20 +146,26 @@
         }
       }
     </style>
+    
     <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
     <link rel="stylesheet" href="https://pionezero.com/bs5.0.2_iso/bootstrap-isolated.css"/>
     
   </head>
   <body>
     
+    <!-- bs5.0.2 ISO .. ref: https://formden.com/blog/isolate-bootstrap -->
     <div class="bs5">
     
-    <div class="row whitecon">
-      <!-- xl collapse is at 1200px, lg is at 992px for 'toggle order' and 'lefttxt' media queries above -->
-      <div class="col-xl-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
-      <div class="col-xl-6 themed-container2 bg1"></div>
-      <!-- <div class="col-md-4 themed-container">.col-md-4</div> -->
-    </div>
+      <div class="row whitecon">
+        <!-- TEXT .. breakpoint determined by bs classes col-xl-6, col-lg-6, col-md-6, etc -->
+        <div class="col-xl-6 themed-container1 lefttxt">Your marketing materials and promotional products are just a few clicks away</div>
+
+        <!-- IMG -->
+        <div class="col-xl-6 themed-container2 bg1"></div>
+
+        <!-- ORIGNAL THIRD COLUMN, can add as many as needed .. source: https://getbootstrap.com/docs/5.0/examples/grid/#containers -->
+        <!-- <div class="col-md-4 themed-container">.col-md-4</div> -->
+      </div>
       
   </body>
 </html>
