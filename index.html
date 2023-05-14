@@ -16,10 +16,12 @@
     <!-- notes .. thanks to: https://getbootstrap.com/docs/5.0/examples/grid/#containers -->
     <style>
       /* borders */
-      body {
-        padding: 0px !important;
-        margin: -106px 0px 0px 0px !important;
-        overflow: hidden !important; /* fixes mobile issue w/white space in right margin, where from? */
+      @media (min-width: 1200px) {
+        body {
+          padding: 0px !important;
+          margin: -106px 0px 0px 0px !important;
+          overflow: hidden !important; /* fixes mobile issue w/white space in right margin, where from? */
+        }
       }
       
       /* for ref, .col-md-6 is this */
