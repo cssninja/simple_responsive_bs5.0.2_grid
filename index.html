@@ -177,6 +177,13 @@
         background:#0071B2;
         }
       }
+
+      /* margin to make desktop colored text only flush with header for miva */
+      @media (min-width: 1200px) {
+        .totop {
+          margin-top: -8% !important;
+        }
+      }
     </style>
     
     <!-- bs5.0.2 iso .. thanks to: https://github.com/franky920920/bootstrap-5-isolated -->
@@ -186,7 +193,7 @@
   <body>
     
     <!-- bs5.0.2 ISO .. ref: https://formden.com/blog/isolate-bootstrap -->
-    <div class="bs5">
+    <div class="bs5 totop">
     
       <div class="row whitecon">
         <!-- TEXT .. breakpoint determined by bs classes col-xl-6, col-lg-6, col-md-6, etc -->
