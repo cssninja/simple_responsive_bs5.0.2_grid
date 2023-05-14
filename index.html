@@ -49,30 +49,62 @@
       }
 
       /* TEXT */
-      .themed-container1 {
-        display: flex;
-        max-width: 35% !important;
-        height: auto;
-        padding: 20px 20px !important; /* tb rl .. was .75rem */
-        margin: 0px; /* was 1.5rem */
-        /* background-color: rgba(0, 123, 255, .15); */
-        /* border: 1px solid rgba(0, 123, 255, .2); */
-        align-items:center;
-        justify-content:center;
+      @media (min-width: 1200px) {
+        .themed-container1 {
+          display: flex;
+          max-width: 35% !important;
+          height: auto;
+          padding: 20px 20px !important; /* tb rl .. was .75rem */
+          margin: 0px; /* was 1.5rem */
+          /* background-color: rgba(0, 123, 255, .15); */
+          /* border: 1px solid rgba(0, 123, 255, .2); */
+          align-items:center;
+          justify-content:center;
+        }
+      }
+      @media (max-width: 1199.5px) {
+        .themed-container1 {
+          display: flex;
+          width: 100%;
+          height: auto;
+          padding: 40px 40px !important; /* tb rl .. was .75rem */
+          margin: 0px; /* was 1.5rem */
+          /* background-color: rgba(0, 123, 255, .15); */
+          /* border: 1px solid rgba(0, 123, 255, .2); */
+          align-items:center;
+          justify-content:center;
+        }
       }
       /* IMAGE */
-      .themed-container2 {
-        display: flex;
-        max-width: 65% !important;
-        height: auto;
-        padding: 0px 0px !important; /* tb rl .. was .75rem */
-        margin: 0px; /* was 1.5rem */
-        /* background-color: rgba(0, 123, 255, .15); */
-        /* border: 1px solid rgba(0, 123, 255, .2); */
-        align-items:center;
-        justify-content:center;
-        vertical-align: middle;
+      @media (min-width: 1200px) {
+        .themed-container2 {
+          display: flex;
+          max-width: 65% !important;
+          height: auto;
+          padding: 0px 0px !important; /* tb rl .. was .75rem */
+          margin: 0px; /* was 1.5rem */
+          /* background-color: rgba(0, 123, 255, .15); */
+          /* border: 1px solid rgba(0, 123, 255, .2); */
+          align-items:center;
+          justify-content:center;
+          vertical-align: middle;
+        }
       }
+      /* IMAGE */
+      @media (min-width: 1199.5px) {
+        .themed-container2 {
+          display: flex;
+          min-width: 50% !important;
+          height: auto;
+          padding: 0px 0px !important; /* tb rl .. was .75rem */
+          margin: 0px; /* was 1.5rem */
+          /* background-color: rgba(0, 123, 255, .15); */
+          /* border: 1px solid rgba(0, 123, 255, .2); */
+          align-items:center;
+          justify-content:center;
+          vertical-align: middle;
+        }
+     }
       /* toggles order in tablet, mobile .. xl collapse is at 1200px, lg is at 992px .. ref: https://developer.mozilla.org/en-US/docs/Web/CSS/order */
       @media (max-width: 1200px) {
         .themed-container2 {
